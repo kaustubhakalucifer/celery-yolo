@@ -33,7 +33,6 @@ class JobSchema(JobBase):
     time_taken_ms: Optional[int] = None
     objects_found: Optional[str] = None  # JSON string for transport
     processed_image_path: Optional[str] = None
-    original_image_path: Optional[str] = None
     status: JobStatus
     created_at: datetime
 

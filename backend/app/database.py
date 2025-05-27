@@ -28,14 +28,17 @@ class Job(Base):
     job_id = Column(String(255), unique=True, index=True, nullable=True)
     start_time = Column(DateTime, nullable=True)
     end_time = Column(DateTime, nullable=True)
+    time_taken_ms = Column(Integer, nullable=True)
     objects_found = Column(Text, nullable=True)  # JSON string of objects
     processed_image_path = Column(String(512), nullable=True)
     original_image_path = Column(String(512), nullable=True)  # Store this for easier access
     status = Column(AlchemyEnum(JobStatus), default=JobStatus.QUEUED)
     created_at = Column(DateTime, default=datetime.datetime.now(datetime.UTC))
 
+
 def create_db_and_tables():
     Base.metadata.create_all(bind=engine)
+
 
 # Dependency to get DB session
 def get_db():
@@ -43,4 +46,4 @@ def get_db():
     try:
         yield db
     finally:
-        db.close();
+        db.close()
