@@ -1,0 +1,16 @@
+fastapi
+uvicorn[standard]
+celery[redis]
+pika
+sqlalchemy
+mysqlclient
+python-dotenv
+torch
+torchvision
+torchaudio
+ultralytics
+opencv-python-headless
+Pillow
+pydantic>=2.0
+pydantic-settings
+requests
