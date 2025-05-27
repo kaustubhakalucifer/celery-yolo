@@ -21,7 +21,7 @@ class Settings(BaseSettings):
 
     # Ensure directories exist
     def __init(self, **values):
-        super().__init(**values)
+        super().__init__(**values)
         os.makedirs(self.INPUT_IMAGE_DIR, exist_ok=True)
         os.makedirs(self.PROCESSED_IMAGE_DIR, exist_ok=True)
 
