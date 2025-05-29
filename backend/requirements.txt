@@ -3,7 +3,7 @@ uvicorn[standard]
 celery[redis]
 pika
 sqlalchemy
-mysqlclient
+pymysql
 python-dotenv
 torch
 torchvision

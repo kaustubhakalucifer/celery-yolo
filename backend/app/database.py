@@ -20,7 +20,6 @@ class JobStatus(str, enum.Enum):
     PROCESSED = "PROCESSED"
     ERROR = "ERROR"
 
-
 class Job(Base):
     __tablename__ = "jobs"
     id = Column(Integer, primary_key=True, index=True, autoincrement=True)

@@ -36,5 +36,5 @@ class JobSchema(JobBase):
     status: JobStatus
     created_at: datetime
 
-class Config:
-    from_attributes = True
+    class Config:
+        from_attributes = True

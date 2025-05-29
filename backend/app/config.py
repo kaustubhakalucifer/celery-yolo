@@ -5,7 +5,7 @@ import os
 class Settings(BaseSettings):
     MYSQL_USER: str = "yolo_user"
     MYSQL_PASSWORD: str = "yolo_password"
-    MYSQL_SERVER: str = "localhost"
+    MYSQL_SERVER: str = "127.0.0.1"
     MYSQL_PORT: str = "3307"
     MYSQL_DB: str = "yolo_jobs"
     DATABASE_URL: str = f"mysql+pymysql://{MYSQL_USER}:{MYSQL_PASSWORD}@{MYSQL_SERVER}:{MYSQL_PORT}/{MYSQL_DB}"
